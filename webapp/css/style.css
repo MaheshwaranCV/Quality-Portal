@@ -1,0 +1,102 @@
+/* Styling the Page */
+
+.bg1 {
+
+    background-image: url("https://metrology.news/wp-content/uploads/2020/11/Visual-Quality-Control-Theres-a-App-for-That.jpg");
+  
+    background-size: cover;
+  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  }
+  
+  
+  
+  
+  /* Styling the VBox */
+  
+  .form {
+  
+    margin: 0 auto;
+  
+    width: 360px;
+  
+    padding: 20px;
+  
+    background-color: #CCF2FF;
+  
+    margin-top: 15%;
+  
+  }
+  
+  
+  
+  
+  /* Styling the Title */
+  
+  .title {
+  
+    font-size: 20px;
+  
+    font-weight: bold;
+  
+    margin-bottom: 10px;
+  
+    color:Black;
+  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  }
+  
+  
+  
+  
+  /* Styling the Label */
+  
+  .label {
+  
+    font-size: 14px;
+  
+    margin-bottom: 5px;
+  
+    color:#808080;
+  
+  }
+  
+  
+  
+  
+  /* Styling the Input Field */
+  
+  .inputField {
+  
+    margin-bottom: 10px;
+  
+    width:10px;
+  
+  }
+  
+  
+  
+  
+  /* Styling the Login Button */
+  
+  .loginButton {
+  
+    margin-top: 10px;
+  
+    background-color: deeppink;
+  
+    color:white;
+  
+  }
+  
+  .bg2 {
+  
+    background-image: url("https://e1.pxfuel.com/desktop-wallpaper/763/192/desktop-wallpaper-plain-color-plain-colour-background-thumbnail.jpg");
+
+    background-size: cover;
+  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  }

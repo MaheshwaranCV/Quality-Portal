@@ -1,0 +1,177 @@
+{
+  "_version": "1.37.0",
+  "sap.app": {
+    "id": "maheshqualityportal",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "Quality Portal",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.10.2",
+      "toolsId": "621cc82a-216c-43d1-a180-f0774af90dd9"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZODATA_QUALITY_MAHESH_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.96.6",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "maheshqualityportal.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "maheshqualityportal.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteViewl",
+          "pattern": ":?query:",
+          "target": [
+            "TargetViewl"
+          ]
+        },
+        {
+          "name": "RouteViewd",
+          "pattern": "QP-Dashboard",
+          "target": [
+            "TargetViewd"
+          ]
+        },
+        {
+          "name": "RouteViewi",
+          "pattern": "Inspection-Lot",
+          "target": [
+            "TargetViewi"
+          ]
+        },
+        {
+          "name": "RouteViewr",
+          "pattern": "Result-Records",
+          "target": [
+            "TargetViewr"
+          ]
+        },
+        {
+          "name": "RouteViewu",
+          "pattern": "Usage-Decision",
+          "target": [
+            "TargetViewu"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetViewl": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Viewl",
+          "viewName": "Viewl"
+        },
+        "TargetViewd": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Viewd",
+          "viewName": "Viewd"
+        },
+        "TargetViewi": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Viewi",
+          "viewName": "Viewi"
+        },
+        "TargetViewr": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Viewr",
+          "viewName": "Viewr"
+        },
+        "TargetViewu": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Viewu",
+          "viewName": "Viewu"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "maheshqualityportal.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

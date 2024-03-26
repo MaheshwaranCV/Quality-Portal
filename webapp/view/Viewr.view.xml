@@ -1,0 +1,135 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:core="sap.ui.core"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	controllerName="maheshqualityportal.controller.Viewr"
+	height="100%">
+
+<Page id="_IDGenPage1" title="RESULT RECORDS">
+<l:HorizontalLayout id="HL" class="sapUiMediumMarginEnd">
+    <FlexBox id="HL1" height="4rem" alignItems="Center" justifyContent="Start">
+        <FlexBox id="HL2" width="1rem" alignItems="Center" justifyContent="Center"/>
+        <Button id="_IDGenButton4" width="10rem" text="BACK" press="back"/>
+        <FlexBox id="HL3" width="57.5rem" alignItems="Center" justifyContent="Center"/>
+        <Button id="_IDGenButton5" width="10rem" text="LOGOUT" press="logout"/>
+        <FlexBox id="HL4" width="1rem" alignItems="Center" justifyContent="Center"/>
+    </FlexBox>
+</l:HorizontalLayout>
+
+<l:HorizontalLayout id="HL5" class="sapUiMediumMarginEnd">
+    <FlexBox id="HL6" height="4rem" alignItems="Center" justifyContent="Start">
+        <FlexBox id="HL7" width="1rem" alignItems="Center" justifyContent="Center" />
+        <Input width="20rem" id="inspectionLotFilter" placeholder="INSPECTION LOT" liveChange="onInspectionLotFilterChange" />
+        <FlexBox id="HL11" width="1rem" alignItems="Center" justifyContent="Center" />
+        <Select width="10rem" id="statusFilter" change="onStatusFilterChange">
+            <core:Item id="_IDGenItem1" text="Select STATUS" key="" />
+            <core:Item id="_IDGenItem2" text="2" key="2" />
+            <core:Item id="_IDGenItem3" text="3" key="3" />
+            <core:Item id="_IDGenItem4" text="5" key="5" />
+        </Select>
+		<FlexBox id="HL8" width="1rem" alignItems="Center" justifyContent="Center" />
+		<Button id="_IDGenButton7" icon="sap-icon://clear-filter" type="Emphasized" press="onClearFilter" />
+		<FlexBox id="HL15" width="33.5rem" alignItems="Center" justifyContent="Center" />
+		<Button id="learnMoreButton" width="10rem" text="LEARN MORE" press="onLearnMorePress"/>
+    </FlexBox>
+</l:HorizontalLayout>
+
+<VBox id="_IDGenVBox1" fitContainer="true">
+<smartTable:SmartTable id="producttable" entitySet="LineItemsSet" smartFilterId="smartFilterBar" tableType="Table" useExportToExcel="false"  useVariantManagement="true" useTablePersonalisation="true" header="Number of Result Records" showRowCount="true"  enableAutoBinding="true"  class="me" app:useSmartToggle="true">
+				<Table id="producttable1" items="{/results}" growing="true"
+							mode="SingleSelectMaster" growingThreshold="25" visible="true" class="tablenoti">
+						<columns>
+							<!-- <Column id="_IDGenColumn1" width="4em">
+								<Text id="_IDGenText1" text="Client ID"/>
+							</Column> -->
+							<Column id="_IDGenColumn2" width="4em">
+								<Text id="_IDGenText2" text="INSPECTION LOT"/>
+							</Column>
+							<Column id="_IDGenColumn3" width="4em">
+								<Text id="_IDGenText3" text="NODE NUMBER"/>
+							</Column>
+								<Column id="_IDGenColumn4" width="4em">
+								<Text id="_IDGenText4" text="CHARACTERISTICS"/>
+							</Column>
+								<Column id="_IDGenColumn5" width="4em">
+								<Text id="_IDGenText5" text="STATUS"/>
+							</Column>
+								<!-- <Column id="_IDGenColumn6" width="4em">
+								<Text id="_IDGenText6" text="Created By"/>
+							</Column> -->
+								<Column id="_IDGenColumn7" width="4em">
+								<Text id="_IDGenText7" text="CREATED ON"/>
+							</Column>
+								<!-- <Column id="_IDGenColumn8" width="4em">
+								<Text id="_IDGenText8" text="Time Stamp"/>
+							</Column> -->
+							<!--	<Column width="4em">-->
+							<!--	<Text text="Data Origin"/>-->
+							<!--</Column>-->
+								<Column id="_IDGenColumn9" width="4em">
+								<Text id="_IDGenText9" text="INSPECTION START DATE"/>
+							</Column>
+								<Column id="_IDGenColumn10" width="4em">
+								<Text id="_IDGenText10" text="INSPECTION END DATE"/>
+							</Column>
+							<!--	<Column width="4em">-->
+							<!--	<Text text="Insp Star Time"/>-->
+							<!--</Column>-->
+							<!--	<Column width="4em">-->
+							<!--	<Text text="Recorded"/>-->
+							<!--</Column>-->
+							<!--<Column width="4em">-->
+							<!--	<Text text="No of Defects"/>-->
+							<!--</Column>-->
+							<!--<Column width="4em">-->
+							<!--	<Text text="Differnece"/>-->
+							<!--</Column>-->
+							<!--<Column width="4em">-->
+							<!--	<Text text="Number Above"/>-->
+							<!--</Column>-->
+							<!--<Column width="4em">-->
+							<!--	<Text text="Number Below."/>-->
+							<!--</Column>-->
+							<!--<Column width="4em">-->
+							<!--	<Text text="Input Processing"/>-->
+							<!--</Column>-->
+							<Column id="_IDGenColumnButton" width="4em">
+                				<Text id="_IDGenText165" />
+            				</Column>
+						</columns>
+						<items>
+							<ColumnListItem id="_IDGenColumnListItem1">
+								<cells>
+									<!-- <Text id="_IDGenText11" text="{Mandant}"/> -->
+								    <Text id="_IDGenText12" text="{Prueflos}"/>
+								    <Text id="_IDGenText13" text="{Vorglfnr}"/>
+								    <Text id="_IDGenText14" text="{Merknr}"/>
+	                                <Text id="_IDGenText15" text="{Satzstatus}"/>
+								    <!-- <Text id="_IDGenText16" text="{Ersteller}"/> -->
+							        <Text id="_IDGenText17" text="{ path: 'Erstelldat', formatter: '.formatDate' }"/>
+									<!-- <Text id="_IDGenText18" text="{Changeddatetime}"/> -->
+								    <!--<Text text="{Qergdath}"/>-->
+								    <Text id="_IDGenText19" text="{ path: 'Pruefdatuv', formatter: '.formatDate' }"/>
+								    <Text id="_IDGenText20" text="{ path: 'Pruefdatub', formatter: '.formatDate' }"/>
+								    <!--<Text text="{Iststpumf}"/>-->
+								    <!--<Text text="{Anzfehle}"/>-->
+								    <!--<Text text="{DiffDecPlaces}"/>-->
+								    <!-- <Text text="{Anzwertu}"/>-->
+								     <!--<Text text="{Anzwertg}"/>-->
+								    <!--<Button icon="sap-icon://display-more" width="80px" id="__button1" press="onClickCell"/>-->
+									<VBox id="_IDGenText299" alignItems="Center">
+      									<Button id="_IDGenText229" icon="sap-icon://hint" press="onShowDetailsPress"/>
+    								</VBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</smartTable:SmartTable>
+			</VBox>
+	</Page>
+</mvc:View>

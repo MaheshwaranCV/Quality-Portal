@@ -1,0 +1,42 @@
+<mvc:View controllerName="maheshqualityportal.controller.Viewd"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+<Page id="page" title="DASHBOARD" class="bg2">
+<content>
+	<VBox id="_IDGenVBox1" fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+		<HBox id="_IDGenHBox1" fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+
+			<GenericTile id="_IDGenGenericTile4" class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+				backgroundImage="https://thumbs.dreamstime.com/z/conformity-inspection-production-line-process-idea-conformity-inspection-production-line-process-idea-conveyor-inspection-226873266.jpg"
+				frameType="TwoByOne" press="onLogin1">
+					<TileContent id="_IDGenTileContent4" footer="INSPECTION LOT">
+						<NewsContent id="_IDGenImageContent4"
+							contentText="An inspection lot is a designated batch of items or materials that undergoes quality assessment within a quality portal."/>
+					</TileContent>
+			</GenericTile>
+
+			<GenericTile id="_IDGenGenericTile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+				backgroundImage="https://thumbs.dreamstime.com/z/quality-control-approval-person-using-laptop-white-table-181649016.jpg"
+				frameType="TwoByOne" press="onLogin2">
+					<TileContent id="_IDGenTileContent5" footer="RESULT RECORDS">
+						<NewsContent id="_IDGenImageContent5"
+						contentText="Result Records in the quality portal provide a concise summary of the outcomes or findings obtained from various tests or evaluations."/>
+					</TileContent>
+			</GenericTile>
+
+			<GenericTile id="_IDGenGenericTile6" class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+				backgroundImage="https://thumbs.dreamstime.com/z/quality-control-engineer-tech-industrial-factory-technician-manufacturing-wearing-lab-coat-hard-hat-as-34023608.jpg"
+				frameType="TwoByOne" press="onLogin3">
+					<TileContent id="_IDGenTileContent6" footer="USAGE DECISION">
+						<NewsContent id="_IDGenImageContent6"
+						contentText="Usage decision determines whether a product or service meets the specified criteria for release or use."/>
+					</TileContent>
+			</GenericTile>
+				
+		</HBox>
+		<FlexBox id="FB" height="4rem"/>
+			<Button id="_IDGenButton5"  width="20rem" text="LOGOUT" press="logout"/>
+	</VBox>
+</content>
+</Page>
+</mvc:View>

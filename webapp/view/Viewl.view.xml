@@ -1,0 +1,18 @@
+<mvc:View controllerName="maheshqualityportal.controller.Viewl"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="_IDGenPage1" title="QUALITY PORTAL - LOGIN" class="bg1">
+				<content>
+                    <VBox id="_IDGenVBox1"  justifyContent="Center"  alignContent="Center" class="form" >
+                        <items>
+                            <Title id="_IDGenTitle1"  class="title" text="ENTER YOUR LOGIN CREDENTIALS"/>
+                            <Label id="_IDGenLabel1" class="label" text="USER ID"/>
+                            <Input width="20rem" id="uid" placeholder="User ID"></Input>
+                            <Label id="_IDGenLabel2"  class="label" text="PASSWORD"/>
+                            <Input width="20rem" id="pasw" placeholder="Password" type="Password"></Input>
+                            <Button id="_IDGenButton1" icon="sap-icon://visits"  width="20rem" text="LOGIN" type="Accept" press="onLogin"></Button>
+                        </items>
+                    </VBox>
+                </content>
+			</Page>
+</mvc:View>
